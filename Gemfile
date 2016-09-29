@@ -11,6 +11,8 @@ gem "bootstrap-sass"
 gem "config"
 gem "figaro"
 gem "react-rails"
+gem "bootstrap-social-rails"
+gem "font-awesome-rails"
 
 group :development, :test do
   gem "pry-byebug"
