@@ -11,7 +11,7 @@ DOM = React.DOM
               DOM.a(
                 {
                   className: "btn btn-block btn-social btn-facebook ",
-                  href: "#"
+                  href: "auth/facebook"
                 },
                 DOM.span(
                   {className: "fa fa-facebook"}

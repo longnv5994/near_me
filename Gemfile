@@ -13,6 +13,10 @@ gem "figaro"
 gem "react-rails"
 gem "bootstrap-social-rails"
 gem "font-awesome-rails"
+gem "omniauth"
+gem "omniauth-facebook"
+gem "warden"
+gem "bcrypt"
 
 group :development, :test do
   gem "pry-byebug"
