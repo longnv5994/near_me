@@ -19,5 +19,5 @@
 
 # Learn more: http://github.com/javan/whenever
 every 1.hour do
-  runner "User.update_data", environment: "production"
+  runner "User.update_data", environment: "development"
 end
