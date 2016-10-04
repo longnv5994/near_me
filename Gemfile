@@ -11,6 +11,8 @@ gem "bootstrap-sass"
 gem "config"
 gem "figaro"
 gem "react-rails"
+gem "omniauth"
+gem "omniauth-facebook"
 
 group :development, :test do
   gem "pry-byebug"
