@@ -1,6 +1,7 @@
 require "bcrypt"
 class User < ApplicationRecord
   include BCrypt
+  include Sidekiq::Worker
 
   before_create :generate_confirmation_token
 

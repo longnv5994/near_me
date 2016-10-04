@@ -12,7 +12,7 @@ class CrawLocation
   private
   def craw_location type, id
     new_graph
-    @graph_data = @graph.get_connections("me", "friends", fields: [type], limit: 20)
+    @graph_data = @graph.get_connections("me", "friends", fields: [type.to_s+"{place}"], limit: 20)
     @graph_data.each do |data|
       if data[type]
         craw_friends data["id"]
