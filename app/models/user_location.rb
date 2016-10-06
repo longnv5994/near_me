@@ -1,3 +1,4 @@
 class UserLocation < ApplicationRecord
-  belongs_to :location, :user
+  belongs_to :location
+  belongs_to :user
 end

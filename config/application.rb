@@ -22,6 +22,10 @@ module Appnearme
     Warden::Manager.serialize_from_session do |id|
       User.find_by_id id
     end
+
+    Warden::Manager.after_authentication do |user|
+      CrawLocation.perform_async user.id
+    end
     # Add Warden in the middleware stack
     config.middleware.insert_after ActionDispatch::Flash, Warden::Manager do |manager|
       manager.default_strategies :authentication_token

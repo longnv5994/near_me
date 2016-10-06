@@ -17,6 +17,8 @@ gem "omniauth"
 gem "omniauth-facebook"
 gem "warden"
 gem "bcrypt"
+gem "koala"
+gem "sidekiq"
 
 group :development, :test do
   gem "pry-byebug"
