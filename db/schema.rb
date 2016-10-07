@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20160929021808) do
 
-  create_table "locations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "locations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "place_name"
     t.string   "city"
     t.string   "country"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20160929021808) do
     t.datetime "updated_at",            null: false
   end
 
-  create_table "relationships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "relationships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
     t.integer  "friend_id"
     t.datetime "created_at", null: false
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20160929021808) do
     t.index ["user_id"], name: "index_relationships_on_user_id", using: :btree
   end
 
-  create_table "user_locations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "user_locations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
     t.integer  "location_id"
     t.datetime "created_at",  null: false
@@ -43,15 +43,18 @@ ActiveRecord::Schema.define(version: 20160929021808) do
     t.index ["user_id"], name: "index_user_locations_on_user_id", using: :btree
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "email"
     t.string   "provider"
     t.string   "uid"
+    t.string   "image"
     t.string   "oauth_token"
     t.boolean  "signed_in"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "authentication_token"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
   add_foreign_key "user_locations", "locations"
