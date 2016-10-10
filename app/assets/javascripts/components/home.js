@@ -5,7 +5,7 @@ DOM = React.DOM
         DOM.div(
           {className: "col-md-6 col-md-offset-3 center jumbotron"},
           DOM.div(
-            {className: ""},
+            {className: "fb-button"},
             DOM.li(
               {className: "col-md-6 col-md-offset-3"},
               DOM.a(

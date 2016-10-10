@@ -22,6 +22,7 @@ class User < ApplicationRecord
 
   private
   def generate_confirmation_token
+    byebug
     token = Digest::SHA1.hexdigest("#{self.uid}")
     self.authentication_token = token
   end

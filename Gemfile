@@ -17,6 +17,7 @@ gem "omniauth"
 gem "omniauth-facebook"
 gem "warden"
 gem "bcrypt"
+gem "react-bootstrap-rails"
 
 group :development, :test do
   gem "pry-byebug"
