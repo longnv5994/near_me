@@ -208,6 +208,7 @@ DEPENDENCIES
   bcrypt
   bootstrap-sass
   bootstrap-social-rails
+  byebug
   config
   figaro
   font-awesome-rails
