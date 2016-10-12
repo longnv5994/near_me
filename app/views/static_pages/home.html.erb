@@ -1,1 +1,22 @@
-<%= react_component("home", {}, {class: "container"}) %>
+<% if current_user %>
+  <div class="main-container">
+    <div class="header-container">
+      <div class="header-left">
+      </div>
+      <div class="header-right">
+        <%= react_component "User", {data: @user}, {class:"user-header"} %>
+      </div>
+    </div>
+    <div class="body-container">
+      <div class="body-left-panel">
+        <%= react_component "Search", {},
+          {class:"searchbox col-md-6 col-md-offset-3"} %>
+      </div>
+      <div class="body-right-panel">
+        <div></div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <%= react_component("Home", {}, {class:"container"}) %>
+<% end %>

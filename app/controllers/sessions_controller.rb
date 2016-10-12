@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def create
     user = User.from_omniauth env["omniauth.auth"]
     authenticate!
-    redirect_to welcome_index_path
+    redirect_to root_path
   end
 
   def destroy

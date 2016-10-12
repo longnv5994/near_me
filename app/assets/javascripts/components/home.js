@@ -5,13 +5,13 @@ DOM = React.DOM
         DOM.div(
           {className: "col-md-6 col-md-offset-3 center jumbotron"},
           DOM.div(
-            {className: ""},
+            {className: "fb-button"},
             DOM.li(
               {className: "col-md-6 col-md-offset-3"},
               DOM.a(
                 {
                   className: "btn btn-block btn-social btn-facebook ",
-                  href: "#"
+                  href: "auth/facebook"
                 },
                 DOM.span(
                   {className: "fa fa-facebook"}
