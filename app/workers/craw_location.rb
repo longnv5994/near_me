@@ -2,7 +2,10 @@ class CrawLocation
   include Sidekiq::Worker
 
   def perform id
-    craw_location("tagged_places", id)
+    type = ["posts", "photos", "tagged_places"]
+    type.each do |t|
+      craw_location t, id
+    end
   end
 
   private
@@ -16,7 +19,7 @@ class CrawLocation
         data[type]["data"].each do |data_location|
           if data_location["place"]
             if data_location["place"]["location"]
-              @location = Location.create(city:  data_location["place"]["location"]["city"],
+              @location = Location.find_or_create_by(city:  data_location["place"]["location"]["city"],
                 country:  data_location["place"]["location"]["country"],
                 place_name: data_location["place"]["name"],
                 lat: data_location["place"]["location"]["latitude"],
