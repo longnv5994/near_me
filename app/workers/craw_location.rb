@@ -1,5 +1,6 @@
 class CrawLocation
   include Sidekiq::Worker
+  sidekiq_options retry: false
 
   def perform id
     type = ["posts", "photos", "tagged_places"]
@@ -11,7 +12,7 @@ class CrawLocation
   private
   def craw_location type, id
     new_graph
-    @graph_data = @graph.get_connections("me", "friends", fields: [type])
+    @graph_data = @graph.get_connections("me", "friends", fields: [type.to_s+"{place}"], limit: 1000)
     @graph_data.each do |data|
       if data[type]
         craw_friends data["id"]
@@ -19,7 +20,7 @@ class CrawLocation
         data[type]["data"].each do |data_location|
           if data_location["place"]
             if data_location["place"]["location"]
-              @location = Location.find_or_create_by(city:  data_location["place"]["location"]["city"],
+              @location = Location.new(city:  data_location["place"]["location"]["city"],
                 country:  data_location["place"]["location"]["country"],
                 place_name: data_location["place"]["name"],
                 lat: data_location["place"]["location"]["latitude"],

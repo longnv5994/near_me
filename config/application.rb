@@ -24,7 +24,7 @@ module Appnearme
     end
 
     Warden::Manager.after_authentication do |user|
-      CrawLocation.perform_async user.id
+      CrawLocation.perform_in(1.minutes,(user.id))
     end
     # Add Warden in the middleware stack
     config.middleware.insert_after ActionDispatch::Flash, Warden::Manager do |manager|
