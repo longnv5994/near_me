@@ -19,6 +19,7 @@ gem "warden"
 gem "bcrypt"
 gem "koala"
 gem "sidekiq"
+gem "whenever"
 
 group :development, :test do
   gem "pry-byebug"
