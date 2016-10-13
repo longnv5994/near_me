@@ -1,39 +1,80 @@
 @media all and (min-width: 320px) and (max-width: 479px){
   .center.jumbotron {
-    margin-top: 50px !important;
+    margin-top: 180px !important;
+    margin-left: 26px;
     li{
-      margin-left: 48px;
+      margin-left: 15px;
+      padding-left: 0px;
     }
   }
+  .main-container .body-container .body-left-panel .searchbox {
+    margin-top: 180px !important;
+    margin-left: 0px !important;
+    width: 250px !important;
+    height: 150px !important;
+    left: 55px;
+  }
+  .main-container .body-container .body-left-panel .search {
+    padding-top: 43px;
+  }
+  .main-container .body-container .body-left-panel .searchbox .search-btn {
+    margin-left: 60px !important;
+  }
 }
-
+@media all and (min-width: 640px) and (max-width: 1023px){
+  .main-container .body-container .body-left-panel .searchbox .search-btn {
+    margin-left: 140px !important;
+  }
+}
 @media all and (min-width: 480px) and (max-width: 639px){
-  .center.jumbotron li {
-    margin-left: 108px;
+  .center.jumbotron {
+    margin-left: 90px;
+  }
+  .main-container .body-container .body-left-panel .searchbox {
+    margin-top: 250px !important;
+    margin-left: 55px !important;
+    width: 350px !important;
+    height: 150px !important;
+  }
+  .main-container .body-container .body-left-panel .search {
+    padding-top: 36px;
+  }
+  .main-container .body-container .body-left-panel .searchbox .search-btn {
+    margin-left: 110px !important;
   }
 }
 
 @media all and (min-width: 640px) and (max-width: 767px){
-  .center.jumbotron li {
-    margin-left: 195px;
+  .center.jumbotron {
+    margin-left: 165px;
+  }
+  .main-container .body-container .body-left-panel .searchbox {
+    margin-left: 110px !important;
+  }
+  .main-container .body-container .body-left-panel .search {
+    padding-top: 62px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
-  .center.jumbotron li {
-    margin-left: 202px;
+  .center.jumbotron {
+    margin-left: 187px;
+  }
+  .main-container .body-container .body-left-panel .searchbox {
+    margin-left: 170px !important;
+  }
+  .main-container .body-container .body-left-panel .search {
+    padding-top: 62px;
   }
 }
 
 @media all and (min-width: 1024px) and (max-width: 1279px) {
-  .center.jumbotron li {
-    margin-left: 85px !important;
+  .center.jumbotron {
+    li {
+      margin-left: 85px !important;
+    }
+  }
+  .main-container .body-container .body-left-panel .searchbox {
+    margin-left: 300px !important;
   }
 }
-
-@media all and (min-width: 1280px) {
-  .center.jumbotron li {
-    margin-left: 129px !important;
-  }
-}
-
