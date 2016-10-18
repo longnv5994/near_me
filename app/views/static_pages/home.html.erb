@@ -10,7 +10,7 @@
     <div class="body-container">
       <div class="body-left-panel">
         <%= react_component "Search", {},
-          {class:"searchbox col-md-6 col-md-offset-3"} %>
+          {class:"searchform"} %>
       </div>
       <div class="body-right-panel">
         <div></div>
@@ -18,5 +18,5 @@
     </div>
   </div>
 <% else %>
-  <%= react_component("Home", {}, {class:"container"}) %>
+  <%= react_component("Home", {}, {class:"container responsive"}) %>
 <% end %>

@@ -8,7 +8,7 @@ var Search = React.createClass({
       <div className="search">
         <input type="text" ref="searchInput" placeholder="Distance..."
           className="form-control" value={this.props.query}/>
-        <div className="form-control btn btn-primary search-btn fa fa-search fa-lg"
+        <div className="btn btn-primary search-btn fa fa-search fa-lg"
           type="text" onClick={this.doSearch}/>
       </div>
     );
