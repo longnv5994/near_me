@@ -21,6 +21,8 @@ gem "koala"
 gem "sidekiq"
 gem "whenever"
 gem "activerecord-import"
+gem "i18n-js"
+gem "react-bootstrap-rails"
 
 group :development, :test do
   gem "pry-byebug"
