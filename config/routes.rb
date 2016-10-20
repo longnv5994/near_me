@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "signout", to: "sessions#destroy", as: "signout"
   post "locations/new", to: "locations#new"
   resource :sessions, only: [:new, :create, :destroy]
+  resource :locations
 end

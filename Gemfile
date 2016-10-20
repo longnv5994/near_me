@@ -21,6 +21,7 @@ gem "koala"
 gem "sidekiq"
 gem "whenever"
 gem "i18n-js"
+gem "geocoder"
 
 group :development, :test do
   gem "pry-byebug"

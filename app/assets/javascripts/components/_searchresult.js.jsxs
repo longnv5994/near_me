@@ -1,0 +1,19 @@
+var Friend = React.createClass({
+  getInitialState: function() {
+    return {
+      friend: this.props.data
+    };
+  },
+
+  getDefaultProps: function() {
+    return {
+      friend: []
+    };
+  },
+
+  render: function(){
+    <div>
+
+    </div>
+  }
+});

@@ -1,23 +1,26 @@
 var Search = React.createClass({
   doSearch:function(){
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        $.ajax({
-          type: 'POST',
-          url: '/locations/new',
-          data: {'location':
-            {'lat': position.coords.latitude,'long': position.coords.longitude}
-          },
-          dataType: 'json',
-          success: function() {
+    // if (navigator.geolocation) {
+    //   navigator.geolocation.getCurrentPosition(function(position) {
+    //     $.ajax({
+    //       type: 'POST',
+    //       url: '/locations/new',
+    //       data: {'location':
+    //         {'lat': position.coords.latitude,'long': position.coords.longitude}
+    //       },
+    //       dataType: 'json',
+    //       success: function() {
+    //         alert(I18n.t('get_location') + " : " + position.coords.latitude + " : " + position.coords.longitude );
+    //       }
+    //     });
+    //   });
+    // }
+    // else {
+    //   alert(I18n.t('get_location_error'));
+    // }
 
-          }
-        });
-      });
-    }
-    else {
-      alert(I18n.t('get_location_error'));
-    }
+
+    $(".body-left-panel").animate({top: '500px'})
   },
   render:function(){
     return(

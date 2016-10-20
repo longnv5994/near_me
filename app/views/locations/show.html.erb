@@ -1,0 +1,9 @@
+<% @locations.each do |location| %>
+<p>
+  <% location.user_locations.each do |user| %>
+
+  <strong><%= user.user_id %></strong>
+  <strong><%= user.location_id %></strong>
+    <% end %>
+</p>
+<% end %>
