@@ -20,4 +20,5 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  get_location: "Get location!"
+  get_location_error: "Geolocation is not supported by this browser!"

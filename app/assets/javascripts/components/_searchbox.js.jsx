@@ -1,7 +1,23 @@
 var Search = React.createClass({
   doSearch:function(){
-    var query=this.refs.searchInput.getDOMNode().value;
-    this.props.doSearch(query);
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        $.ajax({
+          type: 'POST',
+          url: '/locations/new',
+          data: {'location':
+            {'lat': position.coords.latitude,'long': position.coords.longitude}
+          },
+          dataType: 'json',
+          success: function() {
+
+          }
+        });
+      });
+    }
+    else {
+      alert(I18n.t('get_location_error'));
+    }
   },
   render:function(){
     return(
