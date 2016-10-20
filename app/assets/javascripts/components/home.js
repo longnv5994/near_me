@@ -3,11 +3,11 @@ DOM = React.DOM
     render: function(){
       return(
         DOM.div(
-          {className: "col-md-6 col-md-offset-3 center jumbotron"},
+          {className: "center jumbotron"},
           DOM.div(
             {className: "fb-button"},
             DOM.li(
-              {className: "col-md-6 col-md-offset-3"},
+              {className: ""},
               DOM.a(
                 {
                   className: "btn btn-block btn-social btn-facebook ",

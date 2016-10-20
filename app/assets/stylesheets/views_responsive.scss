@@ -1,0 +1,41 @@
+@media (min-width : 320px) and (max-width: 479px) {
+  .center.jumbotron {
+    margin: 40% 0%;
+  }
+  .fb-button {
+    width: 100%;
+  }
+  .center.jumbotron li{
+    width: 80%;
+  }
+  .main-container .body-container .body-left-panel .search {
+    width: 100%;
+  }
+  .main-container .body-container .body-left-panel {
+    width: 76%;
+    left: 12%;
+  }
+}
+
+@media (min-width : 480px) and (max-width: 767px) {
+  .center.jumbotron {
+    margin: 7% 0%;
+  }
+  .fb-button {
+    width: 80%;
+  }
+  .main-container .body-container .body-left-panel {
+    width: 70%;
+    left: 15%;
+    top: 40%;
+  }
+}
+
+@media (min-width : 768px) and (max-width : 991px) {
+  .center.jumbotron {
+    margin: 30% 0%;
+  }
+  .fb-button {
+    width: 80%;
+  }
+}
