@@ -20,6 +20,7 @@ gem "bcrypt"
 gem "koala"
 gem "sidekiq"
 gem "whenever"
+gem "activerecord-import"
 
 group :development, :test do
   gem "pry-byebug"
