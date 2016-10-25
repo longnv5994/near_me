@@ -75,6 +75,7 @@ GEM
       thor (~> 0.14)
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
+    geocoder (1.4.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashie (3.4.6)
@@ -235,6 +236,7 @@ DEPENDENCIES
   config
   figaro
   font-awesome-rails
+  geocoder
   i18n-js
   jquery-rails
   koala

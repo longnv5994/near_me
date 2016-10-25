@@ -22,6 +22,7 @@ gem "sidekiq"
 gem "whenever"
 gem "activerecord-import"
 gem "i18n-js"
+gem "geocoder"
 gem "react-bootstrap-rails"
 
 group :development, :test do

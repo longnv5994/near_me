@@ -8,11 +8,29 @@ var Search = React.createClass({
     this.setState({ showModal: false });
   },
 
+  handler: function(position){
+    $.ajax({
+      type: 'GET',
+      url: 'friends',
+      data: {'location':
+        {'lat': position.coords.latitude,'long': position.coords.longitude}
+      },
+      dataType: 'json',
+      success: function(){
+        window.location.href = '/friends'
+      }
+    });
+  },
+
+  showError: function(error){
+    if (error.code){
+      this.setState({ showModal: true });
+    }
+  },
+
   doSearch:function(){
     if (navigator.geolocation) {
-      this.setState({ showModal: false });
-      navigator.geolocation.getCurrentPosition(function(position) {
-      });
+      navigator.geolocation.getCurrentPosition(this.handler, this.showError);
     }
     else {
       this.setState({ showModal: true });
@@ -34,6 +52,36 @@ var Search = React.createClass({
              <p>{I18n.t('get_location_error')}</p>
           </Modal.Body>
         </Modal>
+      </div>
+    );
+  }
+});
+
+var SearchView = React.createClass({
+  getInitialState() {
+    return { users: this.props.data };
+  },
+  getDefaultProps: function() {
+    return {
+      users: []
+    };
+  },
+  render: function() {
+    var friends = this.state.users.map(function(user){
+      return(
+        <div className="list_friends">
+          <div className="friends-item form-control">
+            <img src={user.image}/>
+            <div className="infor">
+              <p>{user.id}</p>
+            </div>
+          </div>
+        </div>
+      );
+    });
+    return (
+      <div>
+        {friends}
       </div>
     );
   }
