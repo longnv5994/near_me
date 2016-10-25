@@ -20,4 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  error: "Error"
+  get_location: "Get location!"
+  get_location_error: "This app required your location, please check your setting!"
